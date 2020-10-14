@@ -25,10 +25,11 @@ import { SharedModule } from './shared/shared.module';
 import { SpinnerComponent } from './shared/spinner.component';
 import { UIPagesComponent } from './ui-pages/ui-pages.component';
 import { LoginComponent } from './ui-pages/login/login.component';
-
-import { BreadcrumbComponent } from './UI-Pages/layouts/breadcrumb/breadcrumb.component';
-import { HeaderComponent } from './UI-Pages/layouts/header/header.component';
-import { SidebarComponent } from './UI-Pages/layouts/sidebar/sidebar.component';
+import { LayoutsCustomComponent } from './ui-pages/layouts/layouts.component';
+import { BreadcrumbComponent } from './ui-pages/layouts/breadcrumb/breadcrumb.component';
+import { HeaderComponent } from './ui-pages/layouts/header/header.component';
+import { SidebarComponent } from './ui-pages/layouts/sidebar/sidebar.component';
+import { IndexComponent } from './ui-pages/index/index.component';
 
 
 
@@ -42,17 +43,18 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     declarations: [
         AppComponent,
         FullComponent,
-        AppHeaderComponent,
+        AppHeaderComponent, 
         SpinnerComponent,
         AppBlankComponent,
         AppSidebarComponent,
         AppBreadcrumbComponent,
         UIPagesComponent,
         LoginComponent,
-       
+        LayoutsCustomComponent,
         BreadcrumbComponent,
         HeaderComponent,
         SidebarComponent,
+        IndexComponent,
       
      
     ],

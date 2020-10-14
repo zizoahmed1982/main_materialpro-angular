@@ -53,7 +53,7 @@
     <!-- ============================================================== -->
     <!-- app header component - style you can find in header.scss / header.component.ts-->
     <!-- ============================================================== -->
-   
+    <app-custom-header></app-custom-header>
     <!-- ============================================================== -->
     <!-- Right sidebar toggle - style you can find in rightsidebar.component.scss -->
     <!-- ============================================================== -->
@@ -73,7 +73,7 @@
       [opened]="mobileQuery.matches" [disableClose]="mobileQuery.matches" (open)="sidebarOpened = true"
       (close)="sidebarOpened = false" [perfectScrollbar]="config">
 
-     
+      <app-custom-sidebar class="app-sidebar"></app-custom-sidebar>
 
     </mat-sidenav>
     <!-- ============================================================== -->
@@ -122,7 +122,7 @@
     <!-- ============================================================== -->
     <mat-sidenav-content class="page-wrapper" [ngClass]="status ? 'minitoggle' : ''">
 
-     
+      <app-custom-breadcrumb></app-custom-breadcrumb>
       <div class="page-content">
         <router-outlet>
           <app-spinner></app-spinner>

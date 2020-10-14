@@ -13,7 +13,7 @@ import { PerfectScrollbarConfigInterface, PerfectScrollbarDirective } from 'ngx-
   templateUrl: './layouts.component.html',
   styleUrls: ['./layouts.component.scss']
 })
-export class LayoutsComponent  implements OnDestroy {
+export class LayoutsCustomComponent  implements OnDestroy {
   mobileQuery: MediaQueryList;
   dir = 'ltr';
   green = false;

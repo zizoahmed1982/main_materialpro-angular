@@ -5,7 +5,7 @@ import { Router, NavigationEnd, ActivatedRoute, Data } from '@angular/router';
 import { filter, map, mergeMap } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-breadcrumb',
+  selector: 'app-custom-breadcrumb',
   templateUrl: './breadcrumb.component.html',
   styleUrls: ['./breadcrumb.component.scss']
 })

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
 @Component({
-  selector: 'app-header',
+  selector: 'app-custom-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })

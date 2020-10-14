@@ -1,4 +1,5 @@
-
+import { IndexComponent } from './ui-pages/index/index.component';
+import { LayoutsCustomComponent } from './ui-pages/layouts/layouts.component';
 
 import { UIPagesComponent } from './ui-pages/ui-pages.component';
 import { Routes } from '@angular/router';
@@ -18,27 +19,23 @@ export const AppRoutes: Routes = [
         path: '',
         component: LoginComponent,
     },
-    //{
-    //    path: 'home',
-    //    component: HomeComponent,
-  //  },
    // {
-      //  path: 'home',
-       // component: LayoutsComponent,
-       // children: [
+    //    path: 'home',
+        
+     //   component: IndexComponent ,
+  //  },
+    {
+        path: 'home',
+        component: LayoutsCustomComponent,
+        children: [
 
-           // {
-            //    path: '',
-           //     redirectTo: '/dashboards/dashboard1',
-            //    pathMatch: 'full'
-           // },
-           // {
-           //     path: 'home',
-             //   redirectTo: '/ui-pages/home',
-               // pathMatch: 'full'
-           // },
-     //   ]
-    //},
+            {
+                path: '',
+                component: IndexComponent ,
+            },
+            
+        ]
+    },
     {
         path: '',
         component: FullComponent,
