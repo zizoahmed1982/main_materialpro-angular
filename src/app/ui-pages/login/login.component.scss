@@ -4,7 +4,9 @@
 }
 .mat-flat-button.mat-primary, .mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary {
     background-color: #009688;
+    border-radius: 30px;
 }
 .mat-card {
     border-radius: 12px;
+    border-bottom: 5px solid #e1a449;
 }
