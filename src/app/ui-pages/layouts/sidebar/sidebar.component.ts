@@ -1,3 +1,4 @@
+import { MenuCustomItems } from './../menu-items/menu-items';
 import {
   ChangeDetectorRef,
   Component,
@@ -7,7 +8,7 @@ import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { MediaMatcher } from '@angular/cdk/layout';
 
 
-import { MenuItems } from '../../../shared/menu-items/menu-items';
+
 
 @Component({
   selector: 'app-custom-sidebar',
@@ -42,7 +43,7 @@ export class SidebarComponent implements OnDestroy {
   constructor(
     changeDetectorRef: ChangeDetectorRef,
     media: MediaMatcher,
-    public menuItems: MenuItems
+    public menuItems: MenuCustomItems
   ) {
     this.mobileQuery = media.matchMedia('(min-width: 768px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();

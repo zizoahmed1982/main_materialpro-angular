@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'DINNextLTArabic';
+  src: url('../fonts/DINNextLTArabic-Light.woff2') format('woff2'), url('../fonts/DINNextLTArabic-Light.woff') format('woff'), url('../fonts/DINNextLTArabic-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DINNextLTArabic';
+  src: url('../fonts/DINNextLTArabic-Regular.woff2') format('woff2'), url('../fonts/DINNextLTArabic-Regular.woff') format('woff'), url('../fonts/DINNextLTArabic-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DINNextLTArabic';
+  src: url('../fonts/DINNextLTArabic-Medium.woff2') format('woff2'), url('../fonts/DINNextLTArabic-Medium.woff') format('woff'), url('../fonts/DINNextLTArabic-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DINNextLTArabic';
+  src: url('../fonts/DINNextLTArabic-Bold.woff2') format('woff2'), url('../fonts/DINNextLTArabic-Bold.woff') format('woff'), url('../fonts/DINNextLTArabic-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+p,
+div,
+span,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+article,
+section,
+main,
+content,
+table,
+td,
+th,
+button,
+input,
+select {
+  font-family: 'DINNextLTArabic' !important;
+}
+

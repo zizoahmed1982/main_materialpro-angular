@@ -1,11 +1,11 @@
 <!-- ============================================================== -->
 <!-- Notification - style you can find in header.scss -->
 <!-- ============================================================== -->
-<button [matMenuTriggerFor]="notification" mat-icon-button class="m-r-10">
-    <mat-icon>message</mat-icon>
+<button [matMenuTriggerFor]="notification" mat-icon-button class="m-r-10" class="Notifications">
+    <mat-icon>notifications</mat-icon>
     <div class="notify">
         <span class="heartbit"></span>
-        <span class="point"></span>
+        <span class="point">{{notifications.length}}</span>
     </div>
 </button>
 <mat-menu #notification="matMenu" class="mymegamenu">
@@ -36,49 +36,22 @@
         </ul>
     </div>
 </mat-menu>
+
 <!-- ============================================================== -->
 <!-- Profile - style you can find in header.scss -->
 <!-- ============================================================== -->
-<button [matMenuTriggerFor]="message" mat-icon-button class="m-r-10">
-    <mat-icon>email</mat-icon>
-    <div class="notify">
-        <span class="heartbit"></span>
-        <span class="point"></span>
-    </div>
-</button>
-<mat-menu #message="matMenu" class="mymessage">
-    <div class="mailbox">
-        <ul>
-            <li>
-                <div class="drop-title">You have 4 new Mymessages</div>
-            </li>
-            <li>
-                <div class="message-center">
-                    <perfect-scrollbar [config]="config">
-                        <!-- Message -->
-                        <a href="#" *ngFor="let mymessage of mymessages">
-                            <div class="user-img">
-                                <img src="{{mymessage.useravatar}}" alt="user" class="img-circle" width="40">
-                                <span class="profile-status {{mymessage.status}} pull-right"></span>
-                            </div>
-                            <div class="mail-content">
-                                <h5>{{mymessage.from}}</h5>
-                                <span class="mail-desc">{{mymessage.subject}}</span>
-                                <span class="time">{{mymessage.time}}</span>
-                            </div>
-                        </a>
-                        <!-- Message -->
-                    </perfect-scrollbar>
-                </div>
-            </li>
-        </ul>
-    </div>
-</mat-menu>
-<!-- ============================================================== -->
-<!-- Profile - style you can find in header.scss -->
-<!-- ============================================================== -->
+
+    <a [matMenuTriggerFor]="profile" class="font-16">
+        <i class="fa fa-caret-down font-12 m-l-10"></i>
+        <span class="font-14 m-l-10">اهلا </span>
+        عبد العزيز الفهد السعودى
+    </a>
+
 <button [matMenuTriggerFor]="profile" mat-icon-button class="m-r-5">
-    <img src="assets/images/users/1.jpg" alt="user" class="profile-pic"> </button>
+    <img src="assets/images/users/2.png" alt="user" class="profile-pic"> 
+
+   
+</button>
 <mat-menu #profile="matMenu" class="mymegamenu">
     <button mat-menu-item>
         <mat-icon>settings</mat-icon> Settings </button>

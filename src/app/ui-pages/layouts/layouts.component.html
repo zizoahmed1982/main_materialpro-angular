@@ -10,57 +10,46 @@
     <!-- ============================================================== -->
     <!-- Logo - style you can find in header.scss -->
     <!-- ============================================================== -->
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/">
+    <div class="navbar-header p-t-10">
+      <a class="navbar-brand" href="/" fxLayout="column">
         <!-- Logo icon -->
         <b>
           <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
           <!-- Dark Logo icon -->
-          <img src="assets/images/logo-icon.png" alt="homepage" class="dark-logo">
+          <img src="assets/images/New-logo-icon.png" alt="homepage" class="light-logo" height="30px">
           <!-- Light Logo icon -->
-          <img src="assets/images/logo-light-icon.png" alt="homepage" class="light-logo">
+
         </b>
         <!--End Logo icon -->
         <!-- Logo text -->
         <span fxShow="false" fxShow.gt-xs>
           <!-- dark Logo text -->
-          <img src="assets/images/logo-text.png" alt="homepage" class="dark-logo">
+          <img src="assets/images/New-logo-text.png" alt="homepage" class="light-logo" height="30px">
           <!-- Light Logo text -->
-          <img src="assets/images/logo-light-text.png" class="light-logo" alt="homepage">
+
         </span>
       </a>
     </div>
     <!-- ============================================================== -->
-    <!-- sidebar toggle -->
+
     <!-- ============================================================== -->
 
-    <button mat-icon-button (click)="snav.toggle() && clickEvent()" value="sidebarclosed">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <!-- ============================================================== -->
-    <!-- Search - style you can find in header.scss -->
-    <!-- ============================================================== -->
-    <button mat-icon-button class="srh-btn" (click)="showSearch = !showSearch">
-      <mat-icon>search</mat-icon>
-    </button>
-    <form class="app-search" [ngClass]="{'show-search': showSearch}">
-      <input type="text" class="form-control" placeholder="Search &amp; enter">
-      <a class="cl-srh-btn" (click)="showSearch = !showSearch">
-        <i class="ti-close"></i>
-      </a>
-    </form>
+
     <span fxFlex></span>
     <!-- ============================================================== -->
     <!-- app header component - style you can find in header.scss / header.component.ts-->
     <!-- ============================================================== -->
     <app-custom-header></app-custom-header>
     <!-- ============================================================== -->
-    <!-- Right sidebar toggle - style you can find in rightsidebar.component.scss -->
-    <!-- ============================================================== -->
-    <button (click)="end.toggle()" mat-icon-button class="ml-xs overflow-visible">
-      <mat-icon>settings</mat-icon>
-    </button>
+
   </mat-toolbar>
+  <!-- sidebar toggle -->
+  <!-- ============================================================== -->
+
+  <button mat-icon-button (click)="snav.toggle() && clickEvent()" value="sidebarclosed" class="sidebar-toggle"
+    [ngClass]="status ? '' : 'open'">
+    <i class="fa " [ngClass]="status ? 'fa-angle-double-right' : 'fa-angle-double-left'"></i>
+  </button>
   <!-- ============================================================== -->
   <!-- End Topbar - style you can find in pages.scss -->
   <!-- ============================================================== -->
@@ -120,7 +109,7 @@
     <!-- ============================================================== -->
     <!-- Page container - style you can find in pages.scss -->
     <!-- ============================================================== -->
-    <mat-sidenav-content class="page-wrapper" [ngClass]="status ? 'minitoggle' : ''">
+    <mat-sidenav-content class="page-wrapper" fxLayout="column" [ngClass]="status ? 'minitoggle' : ''">
 
       <app-custom-breadcrumb></app-custom-breadcrumb>
       <div class="page-content">
@@ -129,11 +118,21 @@
         </router-outlet>
 
       </div>
+      <footer class='footer '>
+        <mat-card>
+          <div class=" p-t-20 p-b-20 p-l-30 p-r-30 text-center font-17">
+             جميع الحقوق محفوظة لوزارة التعليم 
+            <span>
+               المملكة العربية السعودية 
+            </span>
+          </div>
+        </mat-card>
 
+
+      </footer>
     </mat-sidenav-content>
     <!-- ============================================================== -->
     <!-- Page container - style you can find in pages.scss -->
     <!-- ============================================================== -->
   </mat-sidenav-container>
 </div>
- 

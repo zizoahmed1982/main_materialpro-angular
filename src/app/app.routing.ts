@@ -32,6 +32,13 @@ export const AppRoutes: Routes = [
             {
                 path: '',
                 component: IndexComponent ,
+                data: {
+                    title: 'الصفحة الرئيسية',
+                    urls: [
+                     
+                      { title: 'لوحة المعلومات   ' }
+                    ]
+                  }
             },
             
         ]

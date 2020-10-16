@@ -1,8 +1,9 @@
+import { MenuCustomItems } from './menu-items/menu-items';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { Router } from '@angular/router';
 import {  ChangeDetectorRef,   Component,   OnDestroy } from '@angular/core';
 
-import { MenuItems } from '../../shared/menu-items/menu-items';
+
 
 import { PerfectScrollbarConfigInterface, PerfectScrollbarDirective } from 'ngx-perfect-scrollbar';
 
@@ -41,7 +42,7 @@ export class LayoutsCustomComponent  implements OnDestroy {
     public router: Router,
     changeDetectorRef: ChangeDetectorRef,
     media: MediaMatcher,
-    public menuItems: MenuItems
+    public menuItems: MenuCustomItems
   ) {
     this.mobileQuery = media.matchMedia('(min-width: 768px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();

@@ -1,3 +1,4 @@
+import { MenuCustomItems } from './ui-pages/layouts/menu-items/menu-items';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -75,8 +76,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
         {
             provide: PERFECT_SCROLLBAR_CONFIG, 
             useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
-        }, mailService,mailGlobalVariable
+        }, mailService,mailGlobalVariable,MenuCustomItems
     ],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent] 
 })
 export class AppModule { }
