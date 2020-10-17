@@ -1,3 +1,5 @@
+@import '../../../assets/styles/custom-variable';
+
 .login-register .login-register-box {
     max-width: 500px;
 
@@ -8,5 +10,28 @@
 }
 .mat-card {
     border-radius: 12px;
-    border-bottom: 5px solid #e1a449;
+    border-bottom: 5px solid $color4;
+    box-shadow: 0px 0px 50px  rgba(178,178,178,0.75) !important;
+    -webkit-box-shadow: 0px 0px 50px  rgba(178,178,178,0.75);
+    .mat-card-content {
+        padding: 45px 70px 85px 70px;
+    }
+    h3{
+        color: $color2;
+    }
+    h4{
+        color: #b1b1b1;
+    }
+}
+.login-register {
+    background-position: right;
+}
+.Login-footer{
+    width: 80%;
+    p{
+        color: $color2;
+        &:last-child{
+            color: $color4;
+        }
+    }
 }

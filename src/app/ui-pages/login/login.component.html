@@ -1,12 +1,12 @@
-<div class="login-register" style="background-image:url(assets/images/background/login-register.jpg);">
+<div class="login-register" style="background-image:url(assets/images/background/login-register.jpg);" fxLayout="column" fxLayoutAlign="center center"> 
     <div class="login-register-box">
         <mat-card>
             <mat-card-content>
                 <form [formGroup]="form" (ngSubmit)="onSubmit()">
                     <div class="text-center">
-                        <img alt="homepage" src="assets/images/logo-icon.png">
-                        <h3 class="m-t-0">تسجيل الدخول</h3>
-                        <h4 class="m-t-0">يرجى إدخال رقم الهوية وكلمة المرور</h4>
+                        <img alt="homepage m-b-20" src="assets/images/logo-icon.png">
+                        <h3 class="m-t-0 font-33">تسجيل الدخول</h3>
+                        <h4 class="m-t-0 font-21">يرجى إدخال رقم الهوية وكلمة المرور</h4>
                     </div>
 
                     <div fxLayout="row wrap test-class ">
@@ -15,31 +15,47 @@
                             <mat-form-field>
                                 <input matInput placeholder="اسم المستخدم" [formControl]="form.controls['uname']">
                             </mat-form-field>
-                            <small *ngIf="form.controls['uname'].hasError('required') && form.controls['uname'].touched" class="text-danger support-text">Username is required.</small>
+                            <small *ngIf="form.controls['uname'].hasError('required') && form.controls['uname'].touched"
+                                class="text-danger support-text">Username is required.</small>
                         </div>
                         <!-- col full-->
                         <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
                             <mat-form-field>
-                                <input matInput type="password" placeholder="كلمة المرور" [formControl]="form.controls['password']">
+                                <input matInput type="password" placeholder="كلمة المرور"
+                                    [formControl]="form.controls['password']">
                             </mat-form-field>
-                            <small *ngIf="form.controls['password'].hasError('required') && form.controls['password'].touched" class="text-danger support-text">Password is required.</small>
+                            <small
+                                *ngIf="form.controls['password'].hasError('required') && form.controls['password'].touched"
+                                class="text-danger support-text">Password is required.</small>
                         </div>
                         <!-- col half-->
                         <div fxFlex.gt-sm="50" fxFlex.gt-xs="50">
                             <mat-checkbox color="warn">Remember me</mat-checkbox>
                         </div>
                         <!-- col half-->
-                      
+
                         <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
-                            <button mat-raised-button color="primary" class="btn-block btn-lg m-t-20 m-b-20" type="submit" [disabled]="!form.valid">Login</button>
+                            <button mat-raised-button color="primary" class="btn-block btn-lg m-t-20 m-b-20"
+                                type="submit" [disabled]="!form.valid">Login</button>
                         </div>
                         <!-- col full-->
                     </div>
                 </form>
-               
+
             </mat-card-content>
         </mat-card>
-      
+
     </div>
-   
+    <div class='Login-footer w-75 '   fxLayout="row" fxLayoutAlign="space-between center">
+        <img src="../../../assets/images/V-logo.png" alt="logo" />
+        <div class="font-18">
+            <p>
+                جميع الحقوق محفوظة لوزارة التعليم
+            </p>
+            <p>
+                المملكة العربية السعودية
+            </p>
+
+        </div>
+    </div>
 </div>
