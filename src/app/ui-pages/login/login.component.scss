@@ -18,20 +18,66 @@
     }
     h3{
         color: $color2;
+        font-weight: bold;
     }
     h4{
         color: #b1b1b1;
+        font-weight: 500;
     }
 }
 .login-register {
     background-position: right;
-}
+    .login-form{
+        direction: rtl;
+        .mat-form-field {
+           
+            font-weight: 500;
+            line-height: 1.4;
+            text-align: right;
+            color: #adadad;
+        }
+        
+
+        .mat-checkbox-inner-container {
+            margin-right: 0;
+            margin-left: 8px;
+        }
+        .mat-primary{
+           
+        }
+        .mat-form-field.mat-focused 
+            .mat-form-field-ripple {
+              background-color: $color4 !important;
+
+            }
+        .mat-form-field-ripple {
+            background-color: green !important;
+        }
+        .mat-form-field.mat-focused .mat-form-field-ripple {
+            background-color: $color4 !important;
+        }
+    }
+}   
 .Login-footer{
     width: 80%;
     p{
         color: $color2;
+        font-weight: bold;
         &:last-child{
             color: $color4;
         }
     }
+}
+
+.mat-form-field.mat-focused 
+.mat-form-field-ripple {
+  background-color: $color4 !important;
+
+}
+input:-internal-autofill-selected {
+    background-color: transparent !important;
+}
+.mat-checkbox-layout .mat-checkbox-label {
+    color: #c8c8c8;
+    margin-right: 10px;
 }
