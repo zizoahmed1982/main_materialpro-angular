@@ -14,7 +14,8 @@ import {
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
+  status = false;
+  panelOpenState = false;
   public form: FormGroup = Object.create(null);
   constructor(private fb: FormBuilder, private router: Router) { }
  
@@ -27,6 +28,9 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     this.router.navigate(['/home']);
+  }
+  clickEvent() {
+    this.status = !this.status;
   }
 }
 

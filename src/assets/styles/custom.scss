@@ -100,7 +100,7 @@ body {
 
 
 .sidebar-toggle.mat-icon-button{
-    right: 0;
+    right: 15px;
     background: $color4;
     width: 30px;
     height: 30px;
@@ -190,3 +190,122 @@ body {
 html .page-wrapper {
     height: calc(100vh - 100px);
 }
+
+
+// for any check box
+mat-checkbox{
+&.mat-checkbox-checked:not(.mat-checkbox-disabled).mat-warn .mat-ripple-element,
+ &.mat-checkbox:active:not(.mat-checkbox-disabled).mat-warn .mat-ripple-element
+{  background-color: $color4;
+}
+.mat-checkbox-checkmark-path {
+    stroke:  $color4 !important;
+}
+
+
+.mat-checkbox-inner-container {
+    margin-right: 0;
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+}
+.mat-checkbox-frame {
+    border-color: #ececec;
+    border-radius: 5px;
+}
+&.mat-checkbox-indeterminate.mat-warn .mat-checkbox-background, 
+&.mat-checkbox-checked.mat-warn .mat-checkbox-background {
+    background-color: transparent;
+}
+.mat-checkbox-layout .mat-checkbox-label {
+    line-height: 24px;
+    font-weight: 500;
+    color: #c8c8c8;    font-size: 23px;
+}
+
+}
+
+.login-form{
+
+.mat-raised-button.mat-primary{
+    background-color: rgb(98,195,182);
+    background: linear-gradient(180deg, rgba(98,195,182,1) 0%, rgba(0,144,129,1) 100%);
+    color: #fff;
+    box-shadow: 0px 10px 10px rgba(229, 229, 229, 0.75);
+    opacity: 1;
+    font-weight: bold;
+    font-size: 20px;height: 55px;
+
+   &.mat-button-disabled{
+    opacity: 0.5;
+   }
+   i{
+    transform: rotate(-90deg);
+    padding-top: 10px;
+
+   }
+}
+
+
+.mat-form-field.mat-focused .mat-form-field-ripple {
+background-color: $color4 !important;
+}
+.mat-form-field.mat-focused .mat-form-field-label{
+color: $color2;
+}
+
+}
+input:-internal-autofill-selected {
+    appearance: menulist-button;
+    background-color:blue !important;
+}
+
+.mat-menu-trigger{
+    cursor: pointer;
+}
+
+
+.mat-menu-content {
+    background: #ffffff;
+    
+    .mat-menu-item {
+        color: #009081;
+        font-size: 16px;
+        font-weight: 500;
+        border-bottom: 1px solid #e6e6e6;
+        height: 54px;
+           &:last-child {
+            
+                border-bottom: 0px solid #e6e6e6;
+            }
+            .mat-icon-no-color, 
+            .mat-menu-item-submenu-trigger::after {
+                color: #009081;
+            }
+           &:hover:not([disabled]) .mat-icon-no-color,
+           .mat-menu-item-submenu-trigger::after {
+            color: #fff !important;
+            }
+            &:hover:not([disabled]),
+            .mat-menu-item.cdk-program-focused:not([disabled]), 
+            .mat-menu-item.cdk-keyboard-focused:not([disabled]), 
+            .mat-menu-item-highlighted:not([disabled]) {
+                background: #f6b34f;
+                color: #fff;
+            }
+    }
+    
+}
+/*-- ============================================================== 
+ Ipad & above all(768px) 
+ ============================================================== */
+
+ @media(max-width:768px) {
+    .mat-menu-trigger {
+        display: none;
+    }
+    .sidebar-toggle.mat-icon-button.open {
+        right: 125px !important;
+    }
+ }
